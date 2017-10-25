@@ -53,25 +53,22 @@ MatchGame.renderCards = function(cardValues, $game) {
 
   $game.empty();
   $game.data('flippedCards', []);
-
   for (var valueIndex = 0; valueIndex < cardValues.length; valueIndex++) {
     var value = cardValues[valueIndex];
     var color = colors[value - 1];
     var data = {
       value: value,
       color: color,
-      isFlipped: false
+      isFlipped: false,
+    
+      
     };
-
     var $cardElement = $('<div class="col-xs-3 card"></div>');
-    $cardElement.data(data);
+      $cardElement.data(data);
+
 
     $game.append($cardElement);
-  }
-
-  $('.card').click(function() {
-    MatchGame.flipCard($(this), $('#game'));
-  });
+                                                                                                }
 };
 
 /*
